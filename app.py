@@ -21,7 +21,6 @@ st.subheader("Welcome to the Virtual Assistant for Mental Wellness!")
 tab1, tab2 = st.tabs(["Virtual Therapist", "Number Guessing Game"])
 
 with tab1:
-    st.header("Mental Therapist")
     load_dotenv()
 GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY')
 genai.configure(api_key=GOOGLE_API_KEY)
@@ -65,7 +64,6 @@ with st.sidebar:
     # Save new chats after a message has been sent to AI
     st.session_state.chat_title = f'ChatSession-{st.session_state.chat_id}'
 
-st.write('# Chat with Gemini')
 
 # Chat history (allows to ask multiple questions)
 try:

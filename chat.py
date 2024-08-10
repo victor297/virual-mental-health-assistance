@@ -49,7 +49,6 @@ with st.sidebar:
     # Save new chats after a message has been sent to AI
     st.session_state.chat_title = f'ChatSession-{st.session_state.chat_id}'
 
-st.write('# Chat with Gemini')
 
 # Chat history (allows to ask multiple questions)
 try:
