@@ -64,6 +64,22 @@ with st.sidebar:
     # Save new chats after a message has been sent to AI
     st.session_state.chat_title = f'ChatSession-{st.session_state.chat_id}'
 
+    if st.button('Clear Chat'):
+        st.session_state.messages = []
+        st.session_state.gemini_history = []
+        st.session_state.chat = st.session_state.model.start_chat(
+            history=st.session_state.gemini_history,
+        )
+        joblib.dump(
+            st.session_state.messages,
+            f'data/{st.session_state.chat_id}-st_messages',
+        )
+        joblib.dump(
+            st.session_state.gemini_history,
+            f'data/{st.session_state.chat_id}-gemini_messages',
+        )
+        st.experimental_rerun()  # Refresh the app to show changes
+
 
 # Chat history (allows to ask multiple questions)
 try:
