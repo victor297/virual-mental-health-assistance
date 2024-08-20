@@ -16,7 +16,7 @@ import os
 import random
 
 st.subheader("Welcome to the Virtual Assistant for Mental Wellness!")
-st.write("BY Kaine Michael Chukwudi 20/47cs/01134")
+st.write("BY Kaine Michael Chukwudi 20/47cs/01134 Oginni Zainab Damilola 21d/47xcs/00246")
 
 # Tabs for games and chatbot
 tab1, tab2 = st.tabs(["Virtual Assistant", "Number Guessing Game"])
